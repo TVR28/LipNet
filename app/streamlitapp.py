@@ -1,7 +1,6 @@
 #Importing dependencies
 import streamlit as st
 import os
-pip install imageio
 import imageio
 import tensorflow as tf
 
