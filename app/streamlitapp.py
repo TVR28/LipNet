@@ -22,8 +22,8 @@ with st.sidebar:
 
 st.title('LipReading App') 
 # Generating a list of options or videos 
-# os.path.join('..', 'data', 's1')
-options = os.listdir(app/data/s1)
+
+options = os.listdir(os.path.join('..', 'data', 's1'))
 selected_video = st.selectbox('Choose a video', options)
 
 # Generate two columns 
