@@ -4,6 +4,7 @@ import os
 import imageio
 import tensorflow as tf
 import shutil
+import ntpath
 
 from utils import load_alignments, num_to_char, load_data, load_data_gif
 from modelutil import load_model
@@ -33,12 +34,17 @@ if options:
     # Rendering the video 
     with col1: 
         st.subheader('Converted video to .mp4 format')
-        file_path = os.path.join('.','data','s1', selected_video)
-        os.system(f'ffmpeg -i ./data/s1/{selected_video} test_video.mp4 -y')
+        file_path = os.path.join('..','data','s1', selected_video)
+        #xtracting filename from
+        fname= ntpath.basename(file_path)
+        filename,file_extension = os.path.splitext(fname)
+        path = os.path.join('..','converted_audio',f'{filename}.mp4')
+        os.system(f'ffmpeg -i {file_path} {path} -y')
+        # os.system(f'ffmpeg -i {file_path} test_video.mp4 -y')
         print('Succesful!')
 
         # Rendering inside of the app
-        video = open('app/test_video.mp4', 'rb') 
+        video = open(path, 'rb') 
         video_bytes = video.read() 
         st.video(video_bytes)
 
