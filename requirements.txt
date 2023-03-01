@@ -1,4 +1,4 @@
 imageio==2.19.3
-opencv_python==4.7.0.68
+opencv-python-headless==4.7.0.68
 streamlit==1.18.1
 tensorflow==2.10.1
