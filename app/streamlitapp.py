@@ -10,8 +10,6 @@ from modelutil import load_model
 # Set the layout to the streamlit app as wide 
 st.set_page_config(layout='wide')
 
-# https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png
-
 
 # Setup the sidebar
 with st.sidebar: 
@@ -35,7 +33,7 @@ if options:
     with col1: 
         st.subheader('Converted video to .mp4 format')
         file_path = os.path.join('.','data','s1', selected_video)
-        os.system(f'ffmpeg -i {file_path} test_video.mp4 -y')
+        f'ffmpeg -i {file_path} test_video.mp4 -y'
         print('Succesful!')
 
         # Rendering inside of the app
