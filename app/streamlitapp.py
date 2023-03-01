@@ -38,7 +38,7 @@ if options:
         #xtracting filename from
         fname= ntpath.basename(file_path)
         filename,file_extension = os.path.splitext(fname)
-        path = os.path.join('..','converted_audio',f'{filename}.mp4')
+        path = os.path.join('.','converted_audio',f'{filename}.mp4')
         os.system(f'ffmpeg -i {file_path} {path} -y')
         # os.system(f'ffmpeg -i {file_path} test_video.mp4 -y')
         print('Succesful!')
