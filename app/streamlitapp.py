@@ -3,6 +3,7 @@ import streamlit as st
 import os
 import imageio
 import tensorflow as tf
+import shutil
 
 from utils import load_alignments, num_to_char, load_data, load_data_gif
 from modelutil import load_model
@@ -33,7 +34,7 @@ if options:
     with col1: 
         st.subheader('Converted video to .mp4 format')
         file_path = os.path.join('.','data','s1', selected_video)
-        f'ffmpeg -i {file_path} test_video.mp4 -y'
+        os.getcwd(f'ffmpeg -i {file_path} test_video.mp4 -y')
         print('Succesful!')
 
         # Rendering inside of the app
