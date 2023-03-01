@@ -34,7 +34,7 @@ if options:
     with col1: 
         st.subheader('Converted video to .mp4 format')
         file_path = os.path.join('.','data','s1', selected_video)
-        os.system(f'ffmpeg -i /data/s1/{selected_video} test_video.mp4 -y')
+        os.system(f'ffmpeg -i ./data/s1/{selected_video} test_video.mp4 -y')
         print('Succesful!')
 
         # Rendering inside of the app
