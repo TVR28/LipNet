@@ -27,6 +27,6 @@ def load_model() -> Sequential:
 
     model.add(Dense(41, kernel_initializer='he_normal', activation='softmax'))
 
-    model.load_weights(os.path.join('..','models','checkpoint')) #using the 96 epochs model checkpoint
+    model.load_weights(os.path.join('.','models','checkpoint')) #using the 96 epochs model checkpoint
 
     return model
