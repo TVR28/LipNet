@@ -22,7 +22,8 @@ with st.sidebar:
 
 st.title('LipReading App') 
 # Generating a list of options or videos 
-options = os.listdir(os.path.join('..', 'data', 's1'))
+# os.path.join('..', 'data', 's1')
+options = os.listdir(LipNet/app/data/s1)
 selected_video = st.selectbox('Choose a video', options)
 
 # Generate two columns 
