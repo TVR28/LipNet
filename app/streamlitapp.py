@@ -39,7 +39,7 @@ if options:
         print('Succesful!')
 
         # Rendering inside of the app
-        video = open('test_video.mp4', 'rb') 
+        video = open('app/test_video.mp4', 'rb') 
         video_bytes = video.read() 
         st.video(video_bytes)
 
